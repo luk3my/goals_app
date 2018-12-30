@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Goals App</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <!-- Page Router -->
+    <script src="js/router.js"> </script>
+</head>
+<header>
+    <div id="nav_div"></div>
+</header>
+<body>
+    <div class="main_div">
+
+        <div class="page active" id="home">
+            <h1>Home</h1>
+
+        </div>
+        
+        <div class="page" id="list">
+            <h1>List</h1>
+
+        </div>
+        
+        <div class="page" id="detail">
+            <h1>Detail</h1>
+
+        </div>
+        
+    </div>
+   
+    <script>
+    alert('yo');
+    var yourDiv = $('<div>').load('new.html');
+    $('#main_div').append($(yourDiv));
+
+
+    var index_functions = {
+
+        create_nav_links: function () {
+
+        var nav_content =  `<div class="nav_elements"><span class="glyphicon glyphicon-cloud" style="display: inline-block"><a href="#" data-target="home" class="nav-link">HOME</a></span>
+            <span class="glyphicon glyphicon-tags" style="display: inline-block"><a href="#" data-target="list" class="nav-link">LIST</a></span>
+            <span class="glyphicon glyphicon-tags" style="display: inline-block"><a href="#" data-target="detail" class="nav-link">DETAIL</a></span></div>`
+
+            $( "#nav_div" ).append( nav_content );
+
+        },
+
+        // is_active
+
+    }
+
+    index_functions.create_nav_links();
+
+    </script>
+
+   
+</body>
+</html>
