@@ -23,29 +23,17 @@
     <main>
         <div class="page active" id="home">
             <h1>Home</h1>
-            <!-- <ol>
-                <li><a href="#" data-target="home" class="nav-link">HOME</a></li>
-                <li><a href="#" data-target="list" class="nav-link">LIST</a></li>
-                <li><a href="#" data-target="detail" class="nav-link">DETAIL</a></li>
-            </ol> -->
+
         </div>
         
         <div class="page" id="list">
             <h1>List</h1>
-            <!-- <ol>
-                <li><a href="#" data-target="home" class="nav-link">HOME</a></li>
-                <li><a href="#" data-target="list" class="nav-link">LIST</a></li>
-                <li><a href="#" data-target="detail" class="nav-link">DETAIL</a></li>
-            </ol> -->
+
         </div>
         
         <div class="page" id="detail">
             <h1>Detail</h1>
-            <!-- <ol>
-                <li><a href="#" data-target="home" class="nav-link">HOME</a></li>
-                <li><a href="#" data-target="list" class="nav-link">LIST</a></li>
-                <li><a href="#" data-target="detail" class="nav-link">DETAIL</a></li>
-            </ol> -->
+
         </div>
         
     </main>
@@ -56,13 +44,15 @@
 
         create_nav_icons: function () {
 
-        var nav_content =  `<span class="glyphicon glyphicon-cloud"><a href="#" data-target="home" class="nav-link"><h1>HOME</h1></a></span>
-            <span class="glyphicon glyphicon-tags"><a href="#" data-target="list" class="nav-link">LIST</a></span>
-            <span class="glyphicon glyphicon-tags"><a href="#" data-target="detail" class="nav-link">DETAIL</a></span>`
+        var nav_content =  `<div class="nav_elements"><span class="glyphicon glyphicon-cloud" style="display: inline-block"><a href="#" data-target="home" class="nav-link">HOME</a></span>
+            <span class="glyphicon glyphicon-tags" style="display: inline-block"><a href="#" data-target="list" class="nav-link">LIST</a></span>
+            <span class="glyphicon glyphicon-tags" style="display: inline-block"><a href="#" data-target="detail" class="nav-link">DETAIL</a></span></div>`
 
             $( "#nav_div" ).append( nav_content );
 
-        }
+        },
+
+        // is_active
 
     }
 

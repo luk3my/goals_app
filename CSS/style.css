@@ -39,3 +39,7 @@ h1{
     font-size: 5rem;
     font-weight: 900;
 }
+
+.nav {
+    display: inline-block;
+}

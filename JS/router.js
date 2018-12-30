@@ -2,7 +2,9 @@ const app = {
     pages: [],
     show: new Event('show'),
     init: function(){
+        // alert(window.location.pathname);
         app.pages = document.querySelectorAll('.page');
+        console.log(app.pages);
         app.pages.forEach((pg)=>{
             pg.addEventListener('show', app.pageShown);
         })
@@ -16,7 +18,10 @@ const app = {
     nav: function(ev){
         ev.preventDefault();
         let currentPage = ev.target.getAttribute('data-target');
+        console.log(currentPage);
         document.querySelector('.active').classList.remove('active');
+        console.log(document.querySelector('.active'));
+        console.log(document.getElementById(currentPage));
         document.getElementById(currentPage).classList.add('active');
         console.log(currentPage)
         history.pushState({}, currentPage, `#${currentPage}`);
@@ -42,4 +47,3 @@ const app = {
 }
 
 document.addEventListener('DOMContentLoaded', app.init);
-//yeah
